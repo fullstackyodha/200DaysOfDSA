@@ -4,14 +4,14 @@ function replaceElementsOnRight(arr) {
 
 	for (let i = arr.length - 1; i >= 0; i--) {
 		if (arr[i] >= max) {
-			res.push(max);
+			res.unshift(max);
 			max = arr[i];
 		} else {
-			res.push(max);
+			res.unshift(max);
 		}
 	}
 
-	return res.reverse();
+	return res;
 }
 
 console.log(replaceElementsOnRight([17, 18, 5, 4, 6, 1]));
