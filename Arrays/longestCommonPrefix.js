@@ -1,10 +1,10 @@
-function LCP(strs){
-    // IF ONLY ONE STRING IN ARRAY RETURN IT
-    if (strs.length === 1) {
+function LCP(strs) {
+	// IF ONLY ONE STRING IN ARRAY RETURN IT
+	if (strs.length === 1) {
 		return strs[0];
 	}
 
-    // SELECT ONE STR AT RANDOM FROM ARRAY
+	// SELECT ONE STR AT RANDOM FROM ARRAY
 	let prefix = strs[0];
 	for (let curr = 1; curr < strs.length; curr++) {
 		let common = 0;
@@ -19,11 +19,10 @@ function LCP(strs){
 		}
 
 		// UPDATE PREFIX
-		prefix = common > 0 ? strs[curr].slice(0, common) : "";
+		prefix = common > 0 ? strs[curr].slice(0, common) : '';
 	}
 
 	return prefix;
 }
 
-
-console.log(LCP(["flower","flow","flight"]))
+console.log(LCP(['flower', 'flow', 'flight']));
